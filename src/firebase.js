@@ -3,6 +3,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
+// Import the functions you need from the SDKs you need
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyAqJrHRH8_-wXLZZzH2wlQbjMAEJlvXvVA",
     authDomain: "akilli-sehir-rehberi-mobil.firebaseapp.com",
@@ -12,9 +18,9 @@ const firebaseConfig = {
     appId: "1:100839965102:web:1170135bf45ba3b755483f"
 };
 
-// Firebase'i başlat
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Servisleri dışa aktar
+// Firebase servisleri dışa aktar
 export const auth = getAuth(app);
 export const db = getFirestore(app);
