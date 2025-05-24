@@ -1,28 +1,39 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Splash from "./pages/Splash"; // Splash ekranını unutma
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
-
-// import Home from "./pages/Home"; // İleride ekleyeceğiz
+import Places from "./pages/Places";
+import PlaceDetail from "./pages/PlaceDetail";
+import Profile from "./pages/Profile";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <Router>
+      <Navbar /> {/* Navbar tüm sayfalarda görünür */}
       <Routes>
-        {/* Giriş sayfası */}
-        <Route path="/" element={<Login />} />
-        <Route path="/home" element={<Home />} />
+        {/* Açılışta Splash ekranı */}
+        <Route path="/" element={<Splash />} />
 
-
-        {/* Kayıt sayfası */}
+        {/* Giriş ve kayıt ekranları */}
+        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
-        {/* Ana sayfa (ileride kullanıcı ismiyle karşılanacak) */}
-        {/* <Route path="/home" element={<Home />} /> */}
+        {/* Ana sayfa */}
+        <Route path="/home" element={<Home />} />
+
+        {/* Mekanlar */}
+        <Route path="/places" element={<Places />} />
+        <Route path="/places/:id" element={<PlaceDetail />} />
+
+        {/* Profil */}
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   );
 }
 
 export default App;
+
