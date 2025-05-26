@@ -118,7 +118,7 @@ Sadece aşağıdaki bilgilerle yanıt ver:
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    Authorization: "Bearer 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",
+                    Authorization: "Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}",
                 },
                 body: JSON.stringify({
                     model: "openai/gpt-3.5-turbo",
