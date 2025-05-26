@@ -8,6 +8,8 @@ import Places from "./pages/Places";
 import PlaceDetail from "./pages/PlaceDetail";
 import Profile from "./pages/Profile";
 import Navbar from "./components/Navbar";
+import Assistant from "./pages/Assistant"; // Dosya konumuna göre yol doğruysa
+
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
 
         {/* Profil */}
         <Route path="/profile" element={<Profile />} />
+        <Route path="/assistant" element={<Assistant />} />
+
       </Routes>
     </Router>
   );
